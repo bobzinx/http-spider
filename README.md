@@ -2,14 +2,14 @@
 
 # HTTP-Spyder
 
-A Python-based web crawler designed to recursively explore and collect all URLs from a given website. The crawler follows only internal links within the same domain, ensuring it doesn't navigate outside the main site. It stores all discovered URLs in a file (`urls_collected.txt`).
+A Python-based web spider designed to recursively explore and collect all URLs from a given website. The spider follows only internal links within the same domain, ensuring it doesn't navigate outside the main site. It stores all discovered URLs in a file (`urls_collected.txt`).
 
 ---
 
 ## Features
 
 - **Recursive Crawling**: Automatically follows links to all internal pages of the website.
-- **Domain-Specific Navigation**: The crawler only follows links within the same domain as the starting URL.
+- **Domain-Specific Navigation**: The spider only follows links within the same domain as the starting URL.
 - **URL Collection**: All discovered URLs are saved to a text file (`urls_collected.txt`).
 - **Throttling**: A small delay between requests to avoid overloading the server.
 
@@ -53,28 +53,28 @@ A Python-based web crawler designed to recursively explore and collect all URLs 
 
 1. **Run the Script**:
 
-   To start the crawler, execute the following command, providing the initial URL of the website to crawl:
+   To start the spider, execute the following command, providing the initial URL of the website to crawl:
 
    ```bash
-   python crawler.py https://example.com
+   python spider.py https://example.com
    ```
 
-   - `https://example.com`: The initial URL where the crawler will begin the search.
+   - `https://example.com`: The initial URL where the spider will begin the search.
 
 2. **No Depth Limit**:
 
-   The crawler will follow all internal links and visit every page. There is **no depth limit**—the crawler will continue until all reachable pages have been visited.
+   The spider will follow all internal links and visit every page. There is **no depth limit**—the spider will continue until all reachable pages have been visited.
 
 3. **Output**:
 
-   The crawler will save all collected URLs in a file named `urls_collected.txt`. You can open this file to view the collected links.
+   The spider will save all collected URLs in a file named `urls_collected.txt`. You can open this file to view the collected links.
 
 ---
 
 ## Example Execution
 
 ```bash
-python crawler.py https://example.com
+python spider.py https://example.com
 ```
 
 This will start crawling the website from `https://example.com`, collecting all internal links.
@@ -84,9 +84,9 @@ This will start crawling the website from `https://example.com`, collecting all 
 ## Project Structure
 
 ```bash
-web-crawler/
+web-spider/
 │
-├── crawler.py           # Main script for crawling
+├── spider.py           # Main script for crawling
 ├── requirements.txt     # List of project dependencies
 ├── urls_collected.txt   # File where collected URLs are saved
 └── README.md            # Project documentation (this file)
@@ -98,7 +98,7 @@ web-crawler/
 
 ### Modify the User-Agent
 
-If you want to customize the **User-Agent** of the crawler, modify the `HEADERS` variable in the script:
+If you want to customize the **User-Agent** of the spider, modify the `HEADERS` variable in the script:
 
 ```python
 HEADERS = {
@@ -108,7 +108,7 @@ HEADERS = {
 
 ### Add Proxies
 
-To use the crawler with proxies, you can configure the `proxies` variable in the script:
+To use the spider with proxies, you can configure the `proxies` variable in the script:
 
 ```python
 proxies = {

@@ -1,6 +1,6 @@
 
 
-# Python Web Crawler
+# HTTP-Spyder
 
 A Python-based web crawler designed to recursively explore and collect all URLs from a given website. The crawler follows only internal links within the same domain, ensuring it doesn't navigate outside the main site. It stores all discovered URLs in a file (`urls_collected.txt`).
 
